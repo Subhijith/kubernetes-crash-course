@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "ak8s-cc52"
+    labels:
+        app: "ak8s-cc52"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: ak8sadef-ak8s-cc52.72120e63b8044c02a835.westeurope.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "ak8s-cc52"
+                servicePort: 8080
