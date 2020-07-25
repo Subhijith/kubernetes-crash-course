@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "ak8s-cc52"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "ak8s-cc52"
+    spec:
+      containers:
+        - name: "ak8s-cc52"
+          image: "acraks100.azurecr.io/ak8s"
+          ports:
+          - containerPort: 8080
